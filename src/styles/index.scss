@@ -1,0 +1,70 @@
+@import "vars.scss";
+@import "~normalize.css";
+@import "fonts.css";
+
+html {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: $--color_bg;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  width: auto;
+  height: 100%;
+}
+
+//Hover icon
+.ic {
+  &:hover {
+    opacity: 0.9;
+    cursor: pointer;
+  }
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+@media (min-width: 1366px) {
+  .container {
+    margin: 0;
+  }
+  main {
+    margin-left: 300px;
+  }
+}
