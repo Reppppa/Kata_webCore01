@@ -1,6 +1,6 @@
 import React from "react";
 
-const BurgerClose = ( {width, height, className, color} ) => {
+const Close = ( {width, height, className, color} ) => {
     return (
         <svg
             className={className}
@@ -18,4 +18,4 @@ const BurgerClose = ( {width, height, className, color} ) => {
     )
 }
 
-export { BurgerClose };
+export { Close };

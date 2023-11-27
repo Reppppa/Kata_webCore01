@@ -30,7 +30,7 @@
     display: flex;
     padding: 8px 16px;
     text-wrap: nowrap;
-    font-family: "TT Likes - Medium";
+    font-family: "TT Lakes - Medium";
     font-size: 16px;
     color: $--color_gray;
     font-weight: 500;
@@ -64,13 +64,13 @@
     margin: 0;
     margin-right: 30px;
 
-    font-family: "TT Likes - Regular";
+    font-family: "TT Lakes - Regular";
     color: $--color_dark;
     font-size: 14px;
     font-style: normal;
     line-height: 18px; /* 128.571% */
     letter-spacing: 0.2px;
-    transition: 0.3s;
+    transition: all 0.3s;
     &.open {
       max-height: 100%;
     }
@@ -82,7 +82,7 @@
     align-items: center;
     margin: 16px 0;
 
-    font-family: "TT Likes - Medium";
+    font-family: "TT Lakes - Medium";
     color: $--color_dark;
     font-size: 16px;
     font-weight: 500;
@@ -167,6 +167,7 @@
     }
     &__content {
       flex-direction: row;
+      padding: 0 16px;
     }
     &__description {
       padding: 0;

@@ -2,7 +2,7 @@
 
 .footer {
   width: 100%;
-  font-family: "TT Likes - Medium";
+  font-family: "TT Lakes - Medium";
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
@@ -10,6 +10,7 @@
   color: $--color_gray;
   height: 150px;
   border-top: 1px solid $--color_border;
+  margin-top: 40px;
   &__inner {
     display: flex;
     flex-direction: column;

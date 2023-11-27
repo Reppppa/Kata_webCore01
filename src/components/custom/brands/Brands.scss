@@ -8,7 +8,7 @@
     background: linear-gradient(90deg, #F8F8F8 0%, #FFF 98.61%);
     margin: 0;
 
-    font-family: "TT Likes - Regular";
+    font-family: "TT Lakes - Regular";
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -49,6 +49,7 @@
     align-items: center;
     height: 72px;
     min-width: 240px;
+    max-width: 240px;
 
     border-radius: 6px;
     border: 1px solid $--color_stroke;
@@ -74,7 +75,7 @@
     margin: 24px 0;
     padding: 0 24px;
 
-    font-family: "TT Likes - Medium";
+    font-family: "TT Lakes - Medium";
     color: $--color_dark;
     font-size: 16px;
     font-weight: 500;
@@ -86,6 +87,40 @@
     }
   }
 }
+
+//Swiper
+.swiper {
+  height: 100% !important;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.swiper-wrapper {
+
+}
+.swiper-slide {
+  width: fit-content !important;
+}
+.swiper-slide-active {
+
+}
+.swiper-slide-next {
+
+}
+.swiper-pagination-horizontal {
+  display: flex !important;
+  position: inherit;
+  justify-content: center;
+  padding-top: 16px;
+  bottom: 0 !important;
+  top: 0 !important;
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #DDDDDD !important;
+}
+
 
 @media (min-width: 320px) and (max-width: 425px){
   .brands {
@@ -115,6 +150,7 @@
 }
 @media (min-width: 768px) and (max-width: 1366px){
   .brands {
+    margin-top: 16px;
     &__title {
       padding: 16px 24px;
     }
@@ -128,6 +164,7 @@
     }
     &__item {
       min-width: 224px;
+      max-width: 224px;
     }
     &__readMore {
       display: flex;
@@ -137,6 +174,7 @@
 }
 @media (min-width: 1366px){
   .brands {
+    margin-top: 24px;
     &__title {
       padding: 16px 32px;
     }
