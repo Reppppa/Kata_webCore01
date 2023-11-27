@@ -67,7 +67,11 @@
 }
 
 @media (min-width: 320px) and (max-width: 768px){
-
+  .feedback {
+    &__inner {
+      box-shadow: none;
+    }
+  }
 }
 @media (min-width: 768px) and (max-width: 1366px){
   .feedback {

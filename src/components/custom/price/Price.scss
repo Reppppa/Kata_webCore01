@@ -2,12 +2,23 @@
 
 .price {
   margin-top: 24px;
+  &::after {
+    content: '';
+    width: 24px;
+    height: 200px;
+    position: absolute;
+    background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
   &__title {
     color: $--color_gray;
     padding: 16px 32px;
     border-top: 1px solid $--color_border;
     background: linear-gradient(90deg, #F8F8F8 0%, #FFF 98.61%);
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 16px;
 
     font-family: "TT Lakes - Regular";
     font-size: 16px;
@@ -19,17 +30,7 @@
   }
   &__list {
     padding: 0 16px;
-    display: none;
-    overflow-x: auto;
-    gap: 16px;
-    &::after {
-      content: '';
-      width: 24px;
-      height: 200px;
-      position: absolute;
-      background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
-      right: 0;
-    }
+    column-gap: 16px;
     &::-webkit-scrollbar {
       display: none;
     }

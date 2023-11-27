@@ -1,93 +1,69 @@
-import React from "react";
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/scss';
-import 'swiper/scss/pagination';
+import React, {useEffect, useState} from "react";
 import './Price.scss'
 import { Icon } from "../../icon/icon.jsx";
 
 const Price = () => {
-  return (
-      <section className='price'>
-          <h2 className="price__title">Цены на услуги</h2>
 
-          <div className="price__list mobile">
-              <Swiper
-                  modules={[Pagination]}
-                  spaceBetween={16}
-                  slidesPerView={'auto'}
-                  pagination={{ clickable: true }}
-                  onSlideChange={() => console.log('slide change')}
-                  onSwiper={(swiper) => console.log(swiper)}
-              >
-                  <SwiperSlide>
-                      <div className="price__item">
-                          <span className='price__span'>Ремонтные услуги</span>
-                          <p className="price__description">Тестирование с выдачей технического заключения</p>
-                          <span className='price__span'>Цена</span>
-                          <p className="price__description">Бесплатно</p>
-                          <span className='price__span'>Срок</span>
-                          <p className="price__description">30-120 мин</p>
-                          <button className="price__btn btn">Заказать<Icon name='arrowRight' color='white'/></button>
-                      </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                      <div className="price__item">
-                          <span className='price__span'>Ремонтные услуги</span>
-                          <p className="price__description">Замена дисплея<br/><br/></p>
-                          <span className='price__span'>Цена</span>
-                          <p className="price__description">1 000 ₽</p>
-                          <span className='price__span'>Срок</span>
-                          <p className="price__description">30-120 мин</p>
-                          <button className="price__btn btn">Заказать<Icon name='arrowRight' color='white'/></button>
-                      </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                      <div className="price__item">
-                          <span className='price__span'>Ремонтные услуги</span>
-                          <p className="price__description">Замена полифонического динамика</p>
-                          <span className='price__span'>Цена</span>
-                          <p className="price__description">1 000 ₽</p>
-                          <span className='price__span'>Срок</span>
-                          <p className="price__description">30-120 мин</p>
-                          <button className="price__btn btn">Заказать<Icon name='arrowRight' color='white'/></button>
-                      </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                      <div className="price__item">
-                          <span className='price__span'>Ремонтные услуги</span>
-                          <p className="price__description">Тестирование с выдачей технического заключения</p>
-                          <span className='price__span'>Цена</span>
-                          <p className="price__description">1 000 ₽</p>
-                          <span className='price__span'>Срок</span>
-                          <p className="price__description">30-120 мин</p>
-                          <button className="price__btn btn">Заказать<Icon name='arrowRight' color='white'/></button>
-                      </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                      <div className="price__item">
-                          <span className='price__span'>Ремонтные услуги</span>
-                          <p className="price__description">Тестирование с выдачей технического заключения</p>
-                          <span className='price__span'>Цена</span>
-                          <p className="price__description">1 000 ₽</p>
-                          <span className='price__span'>Срок</span>
-                          <p className="price__description">30-120 мин</p>
-                          <button className="price__btn btn">Заказать<Icon name='arrowRight' color='white'/></button>
-                      </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                      <div className="price__item">
-                          <span className='price__span'>Ремонтные услуги</span>
-                          <p className="price__description">Замена программного обеспечения</p>
-                          <span className='price__span'>Цена</span>
-                          <p className="price__description">1 000 ₽</p>
-                          <span className='price__span'>Срок</span>
-                          <p className="price__description">30-120 мин</p>
-                          <button className="price__btn btn">Заказать<Icon name='arrowRight' color='white'/></button>
-                      </div>
-                  </SwiperSlide>
-              </Swiper>
+  return (
+      <section className='price swiper'>
+          <h2 className="price__title">Цены на услуги</h2>
+          <div className="price__list swiper-wrapper mobile">
+              <div className="price__item swiper-slide">
+                  <span className='price__span'>Ремонтные услуги</span>
+                  <p className="price__description">Тестирование с выдачей технического заключения</p>
+                  <span className='price__span'>Цена</span>
+                  <p className="price__description">Бесплатно</p>
+                  <span className='price__span'>Срок</span>
+                  <p className="price__description">30-120 мин</p>
+                  <button className="price__btn btn">Заказать<Icon name='arrowRight' color='white'/></button>
+              </div>
+              <div className="price__item swiper-slide">
+                  <span className='price__span'>Ремонтные услуги</span>
+                  <p className="price__description">Замена дисплея<br/><br/></p>
+                  <span className='price__span'>Цена</span>
+                  <p className="price__description">1 000 ₽</p>
+                  <span className='price__span'>Срок</span>
+                  <p className="price__description">30-120 мин</p>
+                  <button className="price__btn btn">Заказать<Icon name='arrowRight' color='white'/></button>
+              </div>
+              <div className="price__item swiper-slide">
+                  <span className='price__span'>Ремонтные услуги</span>
+                  <p className="price__description">Замена полифонического динамика</p>
+                  <span className='price__span'>Цена</span>
+                  <p className="price__description">1 000 ₽</p>
+                  <span className='price__span'>Срок</span>
+                  <p className="price__description">30-120 мин</p>
+                  <button className="price__btn btn">Заказать<Icon name='arrowRight' color='white'/></button>
+              </div>
+              <div className="price__item swiper-slide">
+                  <span className='price__span'>Ремонтные услуги</span>
+                  <p className="price__description">Тестирование с выдачей технического заключения</p>
+                  <span className='price__span'>Цена</span>
+                  <p className="price__description">1 000 ₽</p>
+                  <span className='price__span'>Срок</span>
+                  <p className="price__description">30-120 мин</p>
+                  <button className="price__btn btn">Заказать<Icon name='arrowRight' color='white'/></button>
+              </div>
+              <div className="price__item swiper-slide">
+                  <span className='price__span'>Ремонтные услуги</span>
+                  <p className="price__description">Тестирование с выдачей технического заключения</p>
+                  <span className='price__span'>Цена</span>
+                  <p className="price__description">1 000 ₽</p>
+                  <span className='price__span'>Срок</span>
+                  <p className="price__description">30-120 мин</p>
+                  <button className="price__btn btn">Заказать<Icon name='arrowRight' color='white'/></button>
+              </div>
+              <div className="price__item swiper-slide">
+                  <span className='price__span'>Ремонтные услуги</span>
+                  <p className="price__description">Замена программного обеспечения</p>
+                  <span className='price__span'>Цена</span>
+                  <p className="price__description">1 000 ₽</p>
+                  <span className='price__span'>Срок</span>
+                  <p className="price__description">30-120 мин</p>
+                  <button className="price__btn btn">Заказать<Icon name='arrowRight' color='white'/></button>
+              </div>
           </div>
+          <div className="swiper-pagination"></div>
           <table className="table">
               <thead>
                   <tr className='table_header'>

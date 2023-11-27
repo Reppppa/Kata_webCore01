@@ -1,3 +1,13 @@
+.brands::after {
+  content: "";
+  width: 24px;
+  height: 72px;
+  position: absolute;
+  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0) 100%);
+  right: 0;
+  z-index: 2;
+  bottom: 43px;
+}
 .brands__title {
   color: #7E7E82;
   padding: 16px 32px;
@@ -20,18 +30,9 @@
   padding: 0;
   margin: 16px;
   box-sizing: border-box;
-  overflow-x: auto;
 }
 .brands__list.open {
   max-height: 100%;
-}
-.brands__list::after {
-  content: "";
-  width: 24px;
-  height: 72px;
-  position: absolute;
-  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0) 100%);
-  right: 0;
 }
 .brands__list::-webkit-scrollbar {
   display: none;
@@ -61,11 +62,10 @@
   max-width: 120px;
 }
 .brands__showMore {
-  display: flex;
+  display: none;
   flex-direction: row;
   gap: 8px;
   align-items: center;
-  margin: 24px 0;
   padding: 0 24px;
   font-family: "TT Lakes - Medium";
   color: #1B1C21;
@@ -81,6 +81,7 @@
 
 .swiper {
   height: 100% !important;
+  width: 100% !important;
   display: flex;
   flex-direction: column;
   z-index: 1;
@@ -88,6 +89,7 @@
 
 .swiper-slide {
   width: fit-content !important;
+  margin: 0 !important;
 }
 
 .swiper-pagination-horizontal {
@@ -113,16 +115,13 @@
     margin: 16px 0;
     padding: 0 16px;
   }
-  .brands__showMore {
-    display: none;
-  }
 }
 @media (min-width: 425px) and (max-width: 768px) {
   .brands__title {
     padding: 16px 24px;
   }
   .brands__list {
-    margin: 24px;
+    margin: 24px 0;
   }
 }
 @media (min-width: 768px) and (max-width: 1366px) {
@@ -133,8 +132,8 @@
     padding: 16px 24px;
   }
   .brands__list {
-    margin: 24px 0;
-    padding: 0 24px;
+    margin: 24px 24px;
+    padding: 0;
     flex-wrap: wrap;
     column-gap: 24px;
     max-height: 160px;
@@ -144,9 +143,12 @@
     min-width: 224px;
     max-width: 224px;
   }
-  .brands__readMore {
+  .brands__showMore {
     display: flex;
     padding: 0 24px;
+  }
+  .swiper-pagination-horizontal {
+    display: none !important;
   }
 }
 @media (min-width: 1366px) {
@@ -167,11 +169,12 @@
   .brands__item {
     max-height: 240px;
   }
-}
-@media (min-width: 1600px) {
   .brands__showMore {
-    display: none;
-    padding: 0 32px;
+    display: flex;
+    padding: 0 24px;
+  }
+  .swiper-pagination-horizontal {
+    display: none !important;
   }
 }
 

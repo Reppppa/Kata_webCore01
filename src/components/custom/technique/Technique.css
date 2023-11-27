@@ -23,6 +23,7 @@
   display: flex;
   flex-wrap: nowrap;
   max-height: 160px;
+  box-sizing: border-box;
 }
 .technique__list.open {
   max-height: 100%;
@@ -67,7 +68,6 @@
   flex-direction: row;
   gap: 8px;
   align-items: center;
-  margin: 24px 0;
   padding: 0 24px;
   font-family: "TT Lakes - Medium";
   color: #1B1C21;
@@ -86,6 +86,11 @@
     display: none;
   }
 }
+@media (min-width: 425px) and (max-width: 768px) {
+  .technique__showMore {
+    display: none;
+  }
+}
 @media (min-width: 768px) and (max-width: 1366px) {
   .technique__list {
     flex-wrap: wrap;
@@ -93,9 +98,13 @@
     padding: 0 24px;
     max-height: 160px;
     column-gap: 24px;
+    overflow: hidden;
   }
   .technique__item {
     min-width: 224px;
+  }
+  .technique__showMore {
+    display: flex;
   }
 }
 @media (min-width: 1366px) {
@@ -104,12 +113,7 @@
     padding: 0 32px;
     flex-wrap: wrap;
     column-gap: 32px;
-  }
-}
-@media (min-width: 1600px) {
-  .technique__showMore {
-    display: none;
-    padding: 0 32px;
+    overflow: hidden;
   }
 }
 
